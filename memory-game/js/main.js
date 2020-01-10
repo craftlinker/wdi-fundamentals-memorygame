@@ -24,22 +24,25 @@ let cards=[
         cardImage:"images/king-of-diamonds.png"
     }
 ];
-
+let cardOne
 let cardsInPlay = [];
 function checkForMatch(){
-    
-    if (cardsInPlay[0] === cardsInPlay[1]) {
-        console.log("You found a match!");
-    } else {
-        alert("Sorry, try again.");
-    }    
+    if(cardsInPlay.length === 2) {
+        if (cardsInPlay[0] === cardsInPlay[1]) {
+            alert("You found a match!");
+        } else {
+            alert("Sorry, try again.");
+        }    
+        
+
+    }
     
 };
 
 
 function flipCard(cardId){
    
-    
+  
 console.log(" User Flipped " + " " + cards[cardId].rank);
 cardsInPlay.push(cards[cardId].rank)
 console.log(cards[cardId].cardImage) + " " + console.log(cards[cardId].suit)
